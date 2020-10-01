@@ -10,7 +10,7 @@ x_hat_vec = 8:0.001:11;
 L = length(x_hat_vec);
 Jvals = zeros(L,1);
 for i = 1:L
-    Jvals(i) = sum(sum(abs(X-x_hat_vec(i))))/(N*R);
+    Jvals(i) = sum(sum(X-x_hat_vec(i),1))/(N*R);
 end
 [min_J, pos] = min(Jvals);
 plot(x_hat_vec,Jvals);
