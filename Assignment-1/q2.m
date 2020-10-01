@@ -1,6 +1,6 @@
 clear; close all;
-%% data
-%storing 100 realisations of the RV X; mu = 1, sigma = 2;
+%% Covariance matrix
+%storing 100 realisations of the RV X; mu = 1, sigma^2 = 2;
 X = randn([100,1])*sqrt(2)+1;
 Y = 3.*X.^2 + 5.*X;
 %Verification of my function
@@ -21,6 +21,7 @@ plot(N,sigxy,N,(zeros(n,1))+22);
 xlabel('Sample size');
 ylabel('sigma xy');
 %% Checking convergence in the range of 10^6 samples
+%Sample size b/w 10^5-10^6 increased in steps of 10^5
 n_vals = 10^5:10^5:10*10^6;
 sigxy2 = zeros(length(n_vals),1);
 for i=1:length(n_vals)
@@ -34,7 +35,7 @@ plot(n_vals,abs(sigxy2-22));
 title('Deviation from true value');
 xlabel('Sample size');
 ylabel('deviation');
-%% For writing in assignment
+%% Values generated for writing in handwritten part
 n_vals = [10,100,10^3,10^4,10^5,10^6,2*10^6,3*10^6];
 sigxy3 = zeros(length(n_vals),1);
 for i=1:length(n_vals)
