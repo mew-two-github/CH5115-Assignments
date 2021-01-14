@@ -16,7 +16,7 @@ for i = 1:length(X)
     L = L + ((Y(i)-A.*X(i)-B).^2/2);
 end
 surf(A,B,L);
-title('Likelihood function');
+title('Likelihood function'); % should have been negative log lh
 xlabel('a value'); ylabel('b value'); zlabel('Likelihood');
 val = min(min(L));
 pos = find(L==val);

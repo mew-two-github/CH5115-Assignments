@@ -55,6 +55,8 @@ end
 %% Part e)
 figure();
 subplot(1,2,1);
+x5 = phi(:,5);
+x1 = phi(:,1);
 p = polyfit(x5,residuals,2);
 plot(linspace(min(x5),max(x5),40),polyval(p,linspace(min(x5),max(x5),40)),x5,residuals,'x');
 title('quadratic fit for x5 vs residuals');ylabel('Residuals');xlabel('regressor');

@@ -1,2 +1,2 @@
 ## CH5115 Assignments
-My solutions for the assignments in the course Parameter and State Estimation, Fall 2020.
+Project and my solutions for the assignments and quizzes in the course Parameter and State Estimation, Fall 2020.
