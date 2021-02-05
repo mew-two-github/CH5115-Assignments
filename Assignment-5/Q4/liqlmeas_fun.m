@@ -15,6 +15,6 @@ function y = liqlmeas_fun(x)
 % hws = get_param('extkalmfilt_simdemo','modelworkspace')
 
 %Cv = hws.getVariable('Cv');
-Cv = 3;
+Cv2 = 0.8;
 
-y = Cv*sqrt(x);
+y = Cv2*sqrt(x(2));
